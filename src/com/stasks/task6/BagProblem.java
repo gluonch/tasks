@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class BagProblem implements output {
     private int[][] list;
+
     /*
        bagSize - вместимость рюкзака
        BagItem weight - вес
@@ -31,16 +32,18 @@ public class BagProblem implements output {
         this.list = K;
         return K[n][bagSize];
     }
-    private void printItems(int bagWeight, int res, ArrayList<BagItem> items){
-        for(int i = items.size(); i > 0 && res > 0; i--){
-            if(res != this.list[i-1][bagWeight]){
-                res = res - items.get(i-1).cost;
 
-                System.out.println("Название:" + items.get(i-1).name + "; Ценность: "+items.get(i-1).cost);
-                bagWeight = bagWeight - items.get(i-1).weight;
+    private void printItems(int bagWeight, int res, ArrayList<BagItem> items) {
+        for (int i = items.size(); i > 0 && res > 0; i--) {
+            if (res != this.list[i - 1][bagWeight]) {
+                res = res - items.get(i - 1).cost;
+
+                System.out.println("Название:" + items.get(i - 1).name + "; Ценность: " + items.get(i - 1).cost);
+                bagWeight = bagWeight - items.get(i - 1).weight;
             }
         }
     }
+
     @Override
     public void printTask() {
         ArrayList<BagItem> items = new ArrayList<>();
@@ -64,7 +67,7 @@ public class BagProblem implements output {
         int weight;
         int cost;
 
-        BagItem(String name, int weight, int cost){
+        BagItem(String name, int weight, int cost) {
             this.name = name;
             this.weight = weight;
             this.cost = cost;

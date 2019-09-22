@@ -28,17 +28,17 @@ public class FindWord implements output {
         int wLen = this.word.length();
         String wText = this.text.toLowerCase();
 
-        while(index != -1) {
+        while (index != -1) {
             index = wText.indexOf(this.word.toLowerCase(), index);
 
-            if(index != -1) {
+            if (index != -1) {
                 this.count++;
                 index += wLen;
             }
         }
     }
 
-    public int getCount(){
+    public int getCount() {
         return this.count;
     }
 

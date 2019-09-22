@@ -1,6 +1,7 @@
 package com.stasks.task3;
 
 import com.stasks.output;
+
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -13,13 +14,13 @@ public class TextWords implements output {
     public static String toText(String[] words) {
         return String.join(" ", words);
     }
+
     public void readInput() {
         Scanner input = new Scanner(System.in);
 
         this.text = input.nextLine();
         input.close();
     }
-
 
 
     public String[] sortWords(String[] str) {
@@ -29,7 +30,8 @@ public class TextWords implements output {
 
         return sortArray;
     }
-    public String[] getWithoutPunctuation(){
+
+    public String[] getWithoutPunctuation() {
 
         return this.removePunctuation(this.text).split("\\s+");
     }
@@ -40,19 +42,19 @@ public class TextWords implements output {
         return this.wordsArray;
     }
 
-    public String[] getWordsFirstUpperCase(){
+    public String[] getWordsFirstUpperCase() {
         int length = this.wordsArray.length;
         String[] words = new String[length];
         for (int i = 0; i < length; i++) {
             String word = this.wordsArray[i];
-            word = word.substring(0,1).toUpperCase() + word.substring(1);
+            word = word.substring(0, 1).toUpperCase() + word.substring(1);
             words[i] = word;
         }
 
         return words;
     }
 
-    public String[] getWordsArray(){
+    public String[] getWordsArray() {
         return this.wordsArray;
     }
 
@@ -69,7 +71,7 @@ public class TextWords implements output {
     }
 
     @Override
-    public void printTask(){
+    public void printTask() {
         //получаем введенный текст
         String txt = this.getText();
         //получаем массив слов введенного текста

@@ -1,6 +1,7 @@
 package com.stasks.task2;
 
 import com.stasks.output;
+
 import java.util.Scanner;
 
 public class Nodk implements output {

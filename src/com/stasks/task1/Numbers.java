@@ -1,6 +1,7 @@
 package com.stasks.task1;
 
 import com.stasks.output;
+
 import java.util.Scanner;
 
 public class Numbers implements output {
@@ -44,7 +45,7 @@ public class Numbers implements output {
     }
 
     @Override
-    public void printTask(){
+    public void printTask() {
         this.printIsEvenType();
         this.printIsPrimeType();
     }
