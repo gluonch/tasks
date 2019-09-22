@@ -1,5 +1,10 @@
 package com.stasks;
 
+import com.stasks.task1.Numbers;
+import com.stasks.task2.Nodk;
+import com.stasks.task3.TextWords;
+import com.stasks.task4.FindWord;
+import com.stasks.task5.Palindrome;
 import com.stasks.task6.BagProblem;
 
 public class Main {
@@ -13,7 +18,7 @@ public class Main {
         // task 2 run
 //        Nodk nok = new Nodk();
 //        nok.readInput();
-//        nok.printNodk();
+//        nok.printTask();
 
         // task 3 run
 //        TextWords toUpp = new TextWords();
